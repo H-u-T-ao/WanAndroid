@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_web_view_task_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:background="@color/app_theme_color" />
+
+    <ProgressBar
+        android:id="@+id/pb_web_view"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/rl_web_view_top"
+        android:layout_alignParentTop="true"
+        android:indeterminateOnly="false"
+        android:max="100"
+        android:progressDrawable="@drawable/bg_web_view_progress_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_web_view_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_web_view_task_bar"
+        android:background="#00000000"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_web_view_back"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:background="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_web_view_title_left"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_toEndOf="@id/iv_web_view_back" />
+
+        <TextView
+            android:id="@+id/tv_web_view_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tv_web_view_title_left"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="加载中，请稍后......"
+            android:textColor="@color/app_theme_color"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_web_view_top">
+
+    </WebView>
+
+</RelativeLayout>

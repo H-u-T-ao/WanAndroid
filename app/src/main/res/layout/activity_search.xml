@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_search_task_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:background="@color/app_theme_color" />
+
+    <RelativeLayout
+        android:id="@+id/rl_search_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_search_task_bar"
+        android:background="@color/app_theme_color"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_search_back"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:background="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_search_text_left"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_toEndOf="@id/iv_search_back" />
+
+        <EditText
+            android:id="@+id/et_search_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/tv_search_search"
+            android:layout_toEndOf="@+id/tv_search_text_left"
+            android:background="@color/app_theme_color"
+            android:hint=" 搜索......"
+            android:singleLine="true"
+            android:textColor="@color/app_white"
+            android:textCursorDrawable="@drawable/ic_text_cursor_shape_white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_search_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="搜索"
+            android:textColor="@color/app_white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_search_hot_key"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_search_top"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_search_hot_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingTop="20dp"
+            android:text="热门搜索" />
+
+        <LinearLayout
+            android:id="@+id/ll_search_hot_key_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp" />
+
+        <ListView
+            android:id="@+id/lv_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="@drawable/bg_list_view_selector"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_search_request"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/app_theme_color"
+        android:indeterminateTintMode="src_atop"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_search_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/tv_loading_loading_text"
+            android:indeterminateTint="@color/app_theme_color"
+            android:indeterminateTintMode="src_atop" />
+
+        <TextView
+            android:id="@+id/tv_loading_loading_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="正在加载中...      "
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

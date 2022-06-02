@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fengjiaxing.wanandroid"
+    android:versionCode="5"
+    android:versionName="@string/version_name">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <service
+            android:name=".storage.shared.LoginInformationShared"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".application.SystemChildrenActivity" />
+        <activity android:name=".application.WebViewActivity" />
+        <activity android:name=".application.AboutActivity" />
+        <activity android:name=".application.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".application.SearchActivity" />
+        <activity android:name=".application.LoginActivity" />
+        <activity android:name=".application.RegisterActivity" />
+        <activity android:name=".application.MyCollectionActivity" />
+    </application>
+
+</manifest>

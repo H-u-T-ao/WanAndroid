@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="12dp">
+
+    <TextView
+        android:id="@+id/tv_login_task_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:background="@color/app_theme_color" />
+
+    <RelativeLayout
+        android:id="@+id/rl_login_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_login_task_bar"
+        android:background="@color/app_theme_color"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_login_back"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:background="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="登录"
+            android:textColor="@color/app_white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_login_top"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/login_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" 用户名"
+            android:paddingTop="20dp"
+            android:singleLine="true"
+            android:textCursorDrawable="@drawable/bg_text_cursor_shape_theme_color" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <EditText
+            android:id="@+id/et_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" 密码"
+            android:inputType="textPassword"
+            android:paddingTop="20dp"
+            android:password="true"
+            android:singleLine="true"
+            android:textCursorDrawable="@drawable/bg_text_cursor_shape_theme_color" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <Button
+            android:id="@+id/btn_login_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_shape_purple"
+            android:gravity="center"
+            android:text="登录"
+            android:textColor="@color/app_white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/tv_login_to_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="新用户注册"
+            android:textColor="@color/app_theme_color" />
+
+    </LinearLayout>
+</RelativeLayout>

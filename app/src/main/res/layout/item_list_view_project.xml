@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/project_item"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/iv_project_item"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_weight="1"
+        android:background="@color/app_grey"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_weight="3"
+        android:paddingHorizontal="10dp">
+
+        <TextView
+            android:id="@+id/tv_project_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_project_item_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_project_item_title"
+            android:maxLines="3"
+            android:minLines="3"
+            android:textColor="@color/app_theme_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_project_item_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ll_project_item_date"
+            android:layout_alignEnd="@id/ll_project_item_date"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="作者:" />
+
+            <TextView
+                android:id="@+id/tv_project_item_author"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_project_item_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="时间:" />
+
+            <TextView
+                android:id="@+id/tv_project_item_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

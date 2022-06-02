@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_theme_color">#AF95DD</color>
+    <color name="app_theme_color_light_light">#EFE6FF</color>
+    <color name="app_theme_color_light">#CCADFF</color>
+    <color name="app_theme_color_dark">#7B41FF</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="app_black">#FF000000</color>
+    <color name="app_white">#FFFFFFFF</color>
+    <color name="app_grey">#BFBFBF</color>
+</resources>
